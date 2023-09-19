@@ -1,13 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-
-    if (localStorage.getItem("username")) {
-      alert(`Hello human  "${localStorage.getItem("username")}" \nWelcome back.`);
-    } else {
-      let username = prompt("What is your name?");
-      localStorage.setItem("username", username);
-    }
-
-async function convertBinaryToHex() {
+async function convertBinaryToHex() {
     // Get the binary number from the input field.
     var binaryNumber = document.getElementById("binaryInput").value;
     var solutionDiv = document.getElementById("solution");
@@ -43,4 +34,4 @@ closeBtn.addEventListener("click", e => {
   navWrapper.classList.remove("show");
   navWrapper.classList.add("hide");
 });
-});
+
