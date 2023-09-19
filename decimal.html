@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>decimal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+.last{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.dec{
+  margin: 30px;
+  background: none;
+  border: none;
+  outline: none;
+  max-width: 190px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 9999px;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  color: var(--color1);
+}
+.dec1{
+  margin: 30px;
+  background: none;
+  border: none;
+  outline: none;
+  max-width: 190px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 9999px;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  color: var(--color1);
+}
+
+</style>
+<body>
+    <h1><center>Binary to Decimal</center></h1>
+
+    <form class="last">
+      <input type="text" class="dec" id="binaryInput" placeholder="Enter Binary decimal">
+      <button type="button" class="dec1" onclick="convertBinaryToDecimal()">convert</button>
+      <input type="text" class="dec" id="decimalOutput" placeholder="decimal output">
+    </form>
+ <div id="solution"></div>
+ <script>
+    async function convertBinaryToDecimal() {
+    // Get the binary number from the input field.
+    var binaryNumber = document.getElementById("binaryInput").value;
+    var solutionDiv = document.getElementById("solution");
+    // Clear previous solution steps.
+    solutionDiv.innerHTML = "";
+    // Create a step-by-step solution
+    for (var i = 0; i < binaryNumber.length; i++) {
+      await new Promise((resolve) => setTimeout(resolve, 1000)); // Delay for demonstration purposes.
+      var binarySubstring = binaryNumber.substr(0, i + 1);
+      var decimalNumber = parseInt(binarySubstring, 2);
+      var decimalNumber = decimalNumber.toString(15).toUpperCase();
+      var step = `Step ${i + 1}: Convert ${binarySubstring} to decimal: ${binarySubstring} = ${decimalNumber}`;
+      solutionDiv.innerHTML += step + "<br>";
+      if (i === binaryNumber.length - 1) {
+        // Display the final result in the input field.
+        document.getElementById("decimalOutput").value = decimalNumber;
+      }
+    }
+  }
+ </script>
+</body>
+</html>
