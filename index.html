@@ -32,7 +32,7 @@
 document.addEventListener("DOMContentLoaded", function() { 
   
      if (localStorage.getItem("username")) { 
-       alert(`Hello human  "${localStorage.getItem("username")}" \nWelcome back.`); 
+       alert(`Hello "${localStorage.getItem("username")}" \nWelcome back.`); 
      } else { 
        let username = prompt("What is your name?"); 
        localStorage.setItem("username", username); 
