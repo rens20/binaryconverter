@@ -114,7 +114,9 @@ a{
   text-decoration: none;
   font-weight: bold;
 }
-
+.lead{
+font-size: 0.5em;
+}
 }
 /*******.text h1{
   font-size: 0.10em;
