@@ -9,8 +9,8 @@ async function convertBinaryToOcta() {
         await new Promise((resolve) => setTimeout(resolve, 1000)); // Delay for demonstration purposes.
         var binarySubstring = binaryNumber.substr(0, i + 1);
         var decimalNumber = parseInt(binarySubstring, 2);
-        var hexadecimalNumber = decimalNumber.toString(8).toUpperCase();
-        var step = `Step ${i + 1}: Convert ${binarySubstring} to hexadecimal: ${binarySubstring} = ${hexadecimalNumber}`;
+        var octadecimalNumber = decimalNumber.toString(8).toUpperCase();
+        var step = `Step ${i + 1}: Convert ${binarySubstring} to octadecimal: ${binarySubstring} = ${octadecimalNumber}`;
         solutionDiv.innerHTML += step + "<br>";
         if (i === binaryNumber.length - 1) {
             // Display the final result in the input field.
