@@ -14,7 +14,7 @@ async function convertBinaryToOcta() {
         solutionDiv.innerHTML += step + "<br>";
         if (i === binaryNumber.length - 1) {
             // Display the final result in the input field.
-            document.getElementById("octalOutput").value = hexadecimalNumber;
+            document.getElementById("octalOutput").value = octadecimalNumber;
         }
     }
 }
