@@ -61,7 +61,7 @@
       await new Promise((resolve) => setTimeout(resolve, 1000)); // Delay for demonstration purposes.
       var binarySubstring = binaryNumber.substr(0, i + 1);
       var decimalNumber = parseInt(binarySubstring, 2);
-      var decimalNumber = decimalNumber.toString(15).toUpperCase();
+      var decimalNumber = decimalNumber.toString(10).toUpperCase();
       var step = `Step ${i + 1}: Convert ${binarySubstring} to decimal: ${binarySubstring} = ${decimalNumber}`;
       solutionDiv.innerHTML += step + "<br>";
       if (i === binaryNumber.length - 1) {
