@@ -18,7 +18,7 @@ async function convertBinaryToHex() {
       }
     }
   }
-  document.addEventListener("DOMContentLoaded", () => {
+  /***document.addEventListener("DOMContentLoaded", () => {
 
     if (localStorage.getItem("username")) {
       alert(`Hello human  "${localStorage.getItem("username")}" \nWelcome back.`);
@@ -26,7 +26,7 @@ async function convertBinaryToHex() {
       let username = prompt("What is your name?");
       localStorage.setItem("username", username);
     }
-});
+}); ***/
 const icon = document.getElementById("chat-icon");
 
 
