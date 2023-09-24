@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function() {
           console.error("Failed to communicate with the math API.");
         }
         storeMessages();
-      } else if (message.toLowerCase().startsWith("/solve")) {
+      } else if (message.toLowerCase().startsWith("wasie")) {
         const equation = message.substring("/solve".length).trim();
         try {
           const solution = eval(equation);
@@ -320,7 +320,7 @@ document.addEventListener("DOMContentLoaded", function() {
           .catch(error => {
             console.error("Failed to communicate with the Shoti API.");
           });
-      } else if (message.toLowerCase().startsWith("/def.")) {
+      } else if (message.toLowerCase().startsWith("what is.")) {
         const word = message.substring("/definition".length).trim();
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
         if (response.ok) {
