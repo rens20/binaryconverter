@@ -80,6 +80,13 @@ a{
   margin-top: 1.5em;
   text-align: center;
 }
+.icon{
+	font-size: 3em;
+	color:  #ffffffff;
+	margin-top: 5em;
+	margin-left: 15.5em;
+	border: none;
+}
 @media (max-width: 720px){
   .header-bar::after {
     content: '';
@@ -117,24 +124,108 @@ a{
 .lead{
 font-size: 0.5em;
 }
+.icon{
+	font-size: 1.7em;
+	color:  #ffffffff;
+	margin-top: 3em;
+	margin-left: 7.5em;
 }
-/*******.text h1{
-  font-size: 0.10em;
-  margin-top: 1.8em;
+.modalView {
+	width: 80px;
+	position: absolute;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 20%;
+	left: 20%;
+	background: #6f1d93;
+	transform: translate(-50%, -50%);
+	padding: 14px 117px;
+	font-size: 1.2rem;
+	}
+  #modalView__closeBtn {
+	position: absolute;
+	background: #000000;
+	width: 18px;
+	border-radius: 25pxpx;
+	height: 20px;
+	right: -10px;
+	top: -10px;
+	color: white;
+  } 
 }
-.text p{
-  font-size: 0.10em;
-  margin-top: 1.5em;
+/***************modal*************/
+.modalView {
+  width: 300px;
+  position: absolute;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  background: #6f1d93;
+  transform: translate(-50%, -50%);
+  padding: 20px 20px;
+  font-size: 1.2rem;
+  -webkit-box-shadow: -1px 2px 30px -8px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: -1px 2px 30px -8px rgba(0, 0, 0, 0.62);
+  box-shadow: -1px 2px 30px -8px rgba(0, 0, 0, 0.62);
+}
+
+.modalView > .modalView__content {
+  color: white;
+  font-weight: bold;
+}
+.modalView > .modalView__content.centered {
   text-align: center;
 }
-.text h2{
-  font-size: 0.10em;
-  margin-left: 2em;
-  margin-top: 1em;
+
+.modalView__content h1 {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
 }
-.text h3{
-  font-size: 0.10em;
-  margin-top: 1.5em;
-  text-align: center;
+.modalView__content p {
+  font-size: 1rem;
 }
-**/
+
+#modalView__closeBtn {
+  position: absolute;
+  background: #000000;
+  width: 35px;
+  border-radius: 35px;
+  height: 35px;
+  right: -17px;
+  top: -17px;
+  color: white;
+}
+
+#modalView__closeBtn {
+  cursor: pointer;
+}
+#modalView__closeBtn:after,
+#modalView__closeBtn:before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-top: 3px solid #ffffff;
+  position: absolute;
+  top: 13px;
+  right: 0px;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#modalView__closeBtn:before {
+  color: white;
+  right: 14px;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#modalView__closeBtn:hover {
+  background-color: rgb(255, 30, 78);
+}
