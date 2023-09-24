@@ -1,4 +1,4 @@
-async function convertBinaryToHex() {
+async function convertBinaryToHex() {
     // Get the binary number from the input field.
     var binaryNumber = document.getElementById("binaryInput").value;
     var solutionDiv = document.getElementById("solution");
@@ -18,20 +18,30 @@
       }
     }
   }
-const navToggle = document.querySelector(".nav");
-const navWrapper = document.querySelector(".nav-wrapper");
-const closeBtn = document.querySelector(".close");
+  document.addEventListener("DOMContentLoaded", () => {
 
-//Click Event - Open
-navToggle.addEventListener("click", e => {
-  navWrapper.classList.remove("hide");
-  navWrapper.classList.add("scale-in-hor-left");
-  navWrapper.classList.add("show");
+    if (localStorage.getItem("username")) {
+      alert(`Hello human  "${localStorage.getItem("username")}" \nWelcome back.`);
+    } else {
+      let username = prompt("What is your name?");
+      localStorage.setItem("username", username);
+    }
 });
-//Click Event - Close
-closeBtn.addEventListener("click", e => {
-  navWrapper.classList.remove("scale-in-hor-left");
-  navWrapper.classList.remove("show");
-  navWrapper.classList.add("hide");
+const icon = document.getElementById("chat-icon");
+
+
+icon.addEventListener("click", function() {
+
 });
 
+const modalView = document.getElementById("modalView");
+
+const closeBtn = document.getElementById("modalView__closeBtn");
+
+closeBtn.addEventListener("click", () => {
+  modalView.style.display = "none";
+});
+ const chatIcon = document.getElementById('chat-icon');
+ chatIcon.addEventListener('click', () => {
+  window.location.href = 'chat.html';
+ });
