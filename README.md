@@ -1,1 +1,3 @@
 # binaryconverter
+This is open source binary converter
+you can get my code but before copypaste click the star thank you... 
